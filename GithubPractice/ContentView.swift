@@ -8,13 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var showModal = false
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Hello, GitHub!")
+            Button {
+                showModal.toggle()
+            } label: {
+                Text("show!")
+            }
+
         }
+        .sheet(isPresented: $showModal, content: {
+            Text("new view")
+        })
         .padding()
     }
 }
