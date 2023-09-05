@@ -19,7 +19,7 @@ struct ContentView: View {
             Button {
                 showModal.toggle()
             } label: {
-                Text("show!")
+                Text("hit!")
             }
 
         }
